@@ -23,7 +23,7 @@ void ft_print_numbers(void);
 </pre></code>
 
 See [testing file](main.c)
-
+</details>
 
 <details>
 <summary><h3>Output</h3></summary>
@@ -32,13 +32,13 @@ See [testing file](main.c)
 
 <details>
 <summary><h3><b>Approach 1: Copy everything into <code>write</code></b></h3></summary>
-This <a href=ft_print_numbers_v1.c>approach</a> simply puts everything that needs to be written into a single `write()` command. It completes the task with very few lines. Just make sure the text is copied correctly and the number of characters to be printed correctly calibrated. 
+This <a href=ft_print_numbers_v1.c>approach</a> simply puts everything that needs to be written into a single <code>write</code> command. It completes the task with very few lines. Just make sure the text is copied correctly and the number of characters to be printed correctly calibrated. 
 </details>
 
 
 <details>
 <summary><h3><b>Approach 2: Use <code>while</code> loops</b></h3></summary>
-This <a href=ft_print_numbers_v2.c>approach</a> uses `while` loops (and more lines of code) to achieve the same. Even though we are dealing with digits, we continue to put the digits in quotes to refer to these characters. 
+This <a href=ft_print_numbers_v2.c>approach</a> uses <code>while</code> loops (and more lines of code) to achieve the same. Even though we are dealing with digits, we continue to put the digits in quotes to refer to these characters. 
 Alternatively, we can use ASCII values like so:
 <pre><code>...
 x = 48; 
