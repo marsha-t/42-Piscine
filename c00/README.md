@@ -1,1 +1,1 @@
-hello
+The very first C project in the Piscine!
