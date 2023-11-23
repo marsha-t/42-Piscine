@@ -6,12 +6,11 @@
 /*   By: mateo <marsha.teo@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 11:09:40 by mateo             #+#    #+#             */
-/*   Updated: 2023/11/23 10:35:18 by mateo            ###   ########.fr       */
+/*   Updated: 2023/11/23 12:58:44 by mateo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-
 
 // Approach 2
 void	ft_print_alphabet(void)
