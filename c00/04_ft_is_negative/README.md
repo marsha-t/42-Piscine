@@ -29,7 +29,7 @@ int	main(void)
 	write(1, "\n", 1);
 	return (0);
 } </code></pre>
-When testing with integers, it's always good to test with the extreme values. Instead of memorising the minimum and maximum values, simply use the limits.h library which has the macros INT_MIN and INT_MAX which represent the integer minimum and maximum respectively.
+When testing with integers, it's always good to test with the extreme values. Instead of memorising the minimum and maximum values, simply use the <code>limits.h</code> library which has the macros <code>INT_MIN</code> and <code>INT_MAX</code> which represent the integer minimum and maximum respectively.
 
 See [testing file](main.c)
 </details>
