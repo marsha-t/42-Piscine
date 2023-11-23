@@ -1,4 +1,4 @@
-## Objective
+## ft_putchar
 
 |               ft_putchar        |
 |---------------------------------|
@@ -16,25 +16,27 @@ void ft_putchar(char c);
 write(1, &c, 1);
 ```
 
-## Testing
-```
-int	main(void)
+<details>
+<summary><h3>Testing</h3></summary>
+<pre><code> int	main(void)
 {
 	ft_putchar('a');
 	ft_putchar('\n');
 	ft_putchar('z');
 	return (0);
 }
-```
-See [testing file](main.c)
-## Output
-```
-a
-z
-```
-## Approach
+</code></pre>
 
-<details open>
+See [testing file](main.c)
+</details>
+
+<details>
+<summary><h3>Output</h3></summary>
+<pre><code>a
+z</code></pre>
+</details>
+
+<details>
 <summary><h3><b>Approach</b></h3></summary>
 The <a href=ft_putchar.c>answer</a> is in the question.
 </details>
