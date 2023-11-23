@@ -25,8 +25,7 @@ void ft_print_comb(void);
 {
 	ft_print_comb();
 	return (0);
-}
- </code></pre>
+}</code></pre>
 
 See [testing file](main.c)
 </details>
