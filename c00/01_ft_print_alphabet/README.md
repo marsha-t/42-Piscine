@@ -24,7 +24,7 @@ void ft_print_alphabet(void);
 
 See [testing file](main.c)
 
-
+</details>
 <details>
 <summary><h3>Output</h3></summary>
 <pre><code>abcdefghijklmnopqrstuvwxyz</code></pre>
@@ -32,13 +32,13 @@ See [testing file](main.c)
 
 <details>
 <summary><h3><b>Approach 1: Copy everything into <code>write</code></b></h3></summary>
-This <a href=ft_print_alphabet_v1.c>approach</a> simply puts everything that needs to be written into a single `write()` command. It completes the task with very few lines. Just make sure the text is copied correctly and the number of characters to be printed correctly calibrated. 
+This <a href=ft_print_alphabet_v1.c>approach</a> simply puts everything that needs to be written into a single <code>write</code> command. It completes the task with very few lines. Just make sure the text is copied correctly and the number of characters to be printed correctly calibrated. 
 </details>
 
 
 <details>
 <summary><h3><b>Approach 2: Use <code>while</code> loops</b></h3></summary>
-This <a href=ft_print_alphabet_v2.c>approach</a> uses `while` loops (and more lines of code) to achieve the same. In particular, it uses increment to achieve ascending order.
+This <a href=ft_print_alphabet_v2.c>approach</a> uses <code>while</code> loops (and more lines of code) to achieve the same. In particular, it uses increment to achieve ascending order.
 
 Note that even though the <code>write</code> function was used for each character, there's no separator between each printed character. For instance, there isn't a space or a new line in between each character such that eventually, all the characters are printed in a single line together.
 
