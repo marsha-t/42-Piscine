@@ -1,11 +1,13 @@
-## [The Task](../c00.pdf)
-...
+## ft_putnbr
 
-## [The Tests] (main.c)
-
-## The Approaches
-### [Approach 1](ft_putnbr_v1.c)
-...
-### [Approach 2](ft_putnbr_v2.c)
-...
-### [Approach 3](ft_putnbr_v3.c)
+|               ft_putnbr        |
+|---------------------------------|
+| Turn-in directory : ex07/       |
+| Files to turn in : ft_putnbr.c |
+| Allowed functions : write       |
+- Create a function that displays the number entered as a parameter. The function
+has to be able to display all possible values within an <code>int</code> type variable.
+- Here’s how it should be prototyped:
+```
+void ft_putnbr(int nb);
+```
