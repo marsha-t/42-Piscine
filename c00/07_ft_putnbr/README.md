@@ -14,8 +14,8 @@ void ft_putnbr(int nb);
 
 <details>
 <summary><h3>Testing</h3></summary>
-<pre><code>#include <unistd.h>
-#include <limits.h>
+<pre><code>#include &ltunistd.h&gt
+#include &ltlimits.h&gt
 
 int	main(void)
 {
@@ -92,7 +92,6 @@ Since the <code>while</code> loop set-up in line 30 does not allow us to display
 Broadly, for negative integers, we display <code>'-'</code>, convert the integer back into a positive number and proceed as usual. Sounds simple enough but unfortunately, the minimum value for an integer is typically higher in absolute terms than the maximum value for an integer. For instance, <code>INT_MIN</code> for most of you will be -2,147,483,64<b>8</b> while <code>INT_MAX</code> will be 2,147,483,64<b>7</b>. If we were to convert nb = -2,147,483,648 into a positive figure, we attempt to assign 2,147,483,648 to an integer that cannot actually hold it! The solution is to use another variable capable of holding a larger numbers. In my code, I have defined a <code>long long</code> integer variable called <code>x</code> to do this. For some of you, it may be sufficient to define a <code>long</code> integer - it's just that for me, it turns out that <code>LONG_MAX</code> is the same as <code>INT_MAX</code>, forcing me to use <code>long long</code> instead. Confirm the minimum and maximum values within your machine using the <code>limits.h</code> library to know what is necessary/sufficient for you. 
 
 Note that <code>x = -x</code> was used and not <code>x = -nb</code>. With the latter, as <code>nb</code> is an integer value, the right-hand-side of <code>=</code> is evaluated as an integer and we end up forcing 2,147,483,648 into an integer again. This happens before  the value is assigned to a <code>long</code> variable.
-
 </details>
 
 <details>
@@ -179,5 +178,4 @@ while (++i <= 9)
 	base[i] = i + 48; 
 base[++i] = '\0'</code></pre>
 Do note that this is many more lines of code even when using the <code>while</code> loop and removing lines for incrementing (e.g., a line just for <code>i++;</code>). Technically, <code>str[10] = '\0'</code> is not required but it's a good practice to end strings with a null terminator.
-<pre><code></code></pre>
 </details>
