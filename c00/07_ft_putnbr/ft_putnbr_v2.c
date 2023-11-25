@@ -6,22 +6,29 @@
 /*   By: mateo <marsha.teo@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 12:20:21 by mateo             #+#    #+#             */
-/*   Updated: 2023/11/23 11:05:32 by mateo            ###   ########.fr       */
+/*   Updated: 2023/11/25 09:15:34 by mateo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-// Approach 2 - using recursion
 void	ft_putnbr(int nb)
 {
 	char c;
-	if (nb < 0)
+	
+	if (nb == -2147483648)
+	{
+		write(1, "-2", 2);
+		ft_putnbr(147483648);
+		return ;
+	}
+	else if (nb < 0)
 	{
 		write(1, "-", 1);
+		nb = -nb;
 	}
 	if (nb > 9)
 		ft_putnbr(nb / 10);
-	c = nb % 10 + '0';
-	write(1, &c, 1);
+	c = nb % 10 + 48;
+	write(1, &nb, 1);
 }

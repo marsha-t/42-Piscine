@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb2.c                                   :+:      :+:    :+:   */
+/*   ft_print_comb2_v2.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mateo <marsha.teo@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 13:41:58 by mateo             #+#    #+#             */
-/*   Updated: 2023/11/23 10:44:35 by mateo            ###   ########.fr       */
+/*   Updated: 2023/11/24 09:52:01 by mateo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,13 +34,13 @@ void	ft_print_nb(int nb)
 
 void	ft_print_comb2(void)
 {
-	char	array[2];
+	int	array[2];
 
 	array[0] = -1;
-	while (++array[0] < 99)
+	while (++array[0] <= 98)
 	{
 		array[1] = array[0];
-		while (++array[1] < 100)
+		while (++array[1] <= 99)
 		{
 			if (array[0] < array[1])
 			{
@@ -52,4 +52,9 @@ void	ft_print_comb2(void)
 			}
 		}
 	}
+}
+
+int main()
+{
+	ft_print_comb2();
 }
