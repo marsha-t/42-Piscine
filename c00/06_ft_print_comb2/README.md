@@ -1,6 +1,3 @@
-~include approach 2 and describe how to use arrays~
-
-
 ## ft_print_comb2
 
 |               ft_print_comb2        |
@@ -93,11 +90,12 @@ When creating such helper functions, I personally find it easier to think about 
 This <a href=ft_print_comb2_v2.c>approach</a> uses an array to 'hold' all the variables needed for the task. An array is suitable since the variables we need are of the same data type (either <code>char</code> or <code>int</code>). 
 
 While we can use an array to hold the 4 digits, I chose to hold two integers within the array. For instance, for the last combination of numbers (<code>98 99</code>), <code>array[0]</code> will hold <code>98</code> and <code>array[1]</code> will hold <code>99</code>. As a result, the <code>while</code> loop conditions can simply be set according to the last combination (<code>98 99</code>). Also, the <code>if</code> statement comparing the two 2-digit combinations is more intuitive.
-<pre><code>while (++array[0] <= 98)
-{
-	while (++array[1] <= 99)
-	{
-		if (array[0] < array[1])</code></pre>
+<pre><code>40	while (++array[0] <= 98)
+41	{
+...
+43		while (++array[1] <= 99)
+44		{
+45			if (array[0] < array[1])</code></pre>
 
 The logic of the <code>while</code> loops in <code>ft_print_comb2</code> is for the first number to loop from 0 to 98 and the second number to loop from 1 to 99. Since I've chosen to increment the value before it is used in the <code>while</code> loop condition, the first number (array[0]) is initialised at -1. The second number would typically be initialised at <code>array[1] = array[0] + 1</code>, but given the way the incrementing has been set up, it is now simply <code>array[1] = array[0]</code>. 
 
@@ -115,18 +113,16 @@ while (array[0] <= 98)
 }</code></pre> 
 
 We use <code>ft_print_nb</code> to write these numbers. Let's start first with numbers that of a single digit (i.e., those less than 10):
-<pre><code>write(1, "0", 1);
-nb += 48;
-write(1, &nb, 1);
-</code></pre>
+<pre><code>29	write(1, "0", 1);
+30	nb += 48;
+31	write(1, &nb, 1); </code></pre>
 Here, we first remember to print '0' in front of the actual number. We also add 48 to the number to get to the actual character. For instance, if the <code>nb</code> was 1, trying to display nb as it is will cause the <code>write</code> command to refer to "Start of Heading", a non-printable character with the ASCII value of 1. Instead, we want to print <code>'1'</code> which has an ASCII value of 49. Therefore, we add 48 to <code>nb</code> before printing it.
 
 Now, for numbers greater than 9, we print the first digit separately to the second digit:
-<pre><code>a = nb / 10 + 48;
-b = nb % 10 + 48;
-write(1, &a, 1);
-write(1, &b, 1);
-</code></pre>
+<pre><code>22	a = nb / 10 + 48;
+23	b = nb % 10 + 48;
+24	write(1, &a, 1);
+25	write(1, &b, 1); </code></pre>
 
 To get the first digit, we divide the number by 10. If the number was 42, dividing it by 10 will give us 4. It won't give us 4.2 because we are dealing purely with integers here: since the dividend and the divisor are integers, the quotient (i.e., the result) will also be an integer. As before, we add 48 to the result so that we print the character (e.g., <code>'4'</code>).
 
