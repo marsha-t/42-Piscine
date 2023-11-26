@@ -44,7 +44,7 @@ N</code></pre>
 </details>
 
 <details>
-<summary><h3><b>Approach</b></h3></summary>
+<summary><h3>Approach</h3></summary>
 The <a href=ft_is_negative.c>answer</a> uses <code>if/else</code>. In this version, we write 'N' if the number is negative and 'P' otherwise. We could've flipped the conditions as well:
 
 <pre><code>if (n >= 0)

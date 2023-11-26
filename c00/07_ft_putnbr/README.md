@@ -48,7 +48,7 @@ See [testing file](main.c)
 </details>
 
 <details>
-<summary><h3><b>Approach 1: Use an array</code></b></h3></summary>
+<summary><h3>Approach 1: Use an array</code></h3></summary>
 This <a href=ft_putnbr_v1.c>approach</a> first separates each digit within the integer and stores the digits in an array (lines 30-34). Thereafter, it prints these digits (lines 35-40). It also caters for the case of <code>0</code> (lines 23-24) and negative cases (lines 25-29).
 
 <h4>Separating digits from the integer (i.e,. how we get <code>'1'</code>, <code>'2'</code> and <code>'3'</code> from <code>123</code>). </h4>
@@ -89,14 +89,14 @@ If we wanted to save one line of code, we can consider the following code. We de
 Since the <code>while</code> loop set-up in line 30 does not allow us to display a single '0' (if we tried, we won't be able to escape the <code>while</code> loop for reasons discussed above), we have to cater for it separately in lines 23-24. 
 
 <h4>Dealing with negative integers or <code>nb < 0</code></h4>
-Broadly, for negative integers, we display <code>'-'</code>, convert the integer back into a positive number and proceed as usual. Sounds simple enough but unfortunately, the minimum value for an integer is typically higher in absolute terms than the maximum value for an integer. For instance, <code>INT_MIN</code> for most of you will be -2,147,483,64<b>8</b> while <code>INT_MAX</code> will be 2,147,483,64<b>7</b>. If we were to convert nb = -2,147,483,648 into a positive figure, we attempt to assign 2,147,483,648 to an integer that cannot actually hold it! The solution is to use another variable capable of holding a larger numbers. In my code, I have defined a <code>long long</code> integer variable called <code>x</code> to do this. For some of you, it may be sufficient to define a <code>long</code> integer - it's just that for me, it turns out that <code>LONG_MAX</code> is the same as <code>INT_MAX</code>, forcing me to use <code>long long</code> instead. Confirm the minimum and maximum values within your machine using the <code>limits.h</code> library to know what is necessary/sufficient for you. 
+Broadly, for negative integers, we display <code>'-'</code>, convert the integer back into a positive number and proceed as usual. Sounds simple enough but unfortunately, the minimum value for an integer is typically higher in absolute terms than the maximum value for an integer. For instance, <code>INT_MIN</code> for most of you will be -2,147,483,64<u>8</u> while <code>INT_MAX</code> will be 2,147,483,64<u>7</u>. If we were to convert nb = -2,147,483,648 into a positive figure, we attempt to assign 2,147,483,648 to an integer that cannot actually hold it! The solution is to use another variable capable of holding a larger numbers. In my code, I have defined a <code>long long</code> integer variable called <code>x</code> to do this. For some of you, it may be sufficient to define a <code>long</code> integer - it's just that for me, it turns out that <code>LONG_MAX</code> is the same as <code>INT_MAX</code>, forcing me to use <code>long long</code> instead. Confirm the minimum and maximum values within your machine using the <code>limits.h</code> library to know what is necessary/sufficient for you. 
 
 Note that <code>x = -x</code> was used and not <code>x = -nb</code>. With the latter, as <code>nb</code> is an integer value, the right-hand-side of <code>=</code> is evaluated as an integer and we end up forcing 2,147,483,648 into an integer again. This happens before  the value is assigned to a <code>long</code> variable.
 
 </details>
 
 <details>
-<summary><h3><b>Approach 2: Use recursion</code></b></h3></summary>
+<summary><h3>Approach 2: Use recursion</code></h3></summary>
 This <a href=ft_putnbr_v2.c>approach</a> produces succinct code but it requires you to understand and use recursion where the function calls upon itself. 
 
 Where the number is less than 10, say 8, the function calculates the 8 modulo 10 (i.e., 8) and adds 48 to display <code>'8'</code>. Straightforward enough! 
@@ -132,7 +132,7 @@ Of course, we can also take this approach to the extreme and avoid recursion for
 </details>
 
 <details>
-<summary><h3><b>Approach 3: Use recursion but make it adaptable to any base</code></b></h3></summary>
+<summary><h3>Approach 3: Use recursion but make it adaptable to any base</code></h3></summary>
 This <a href=ft_putnbr_v3.c>approach</a> is similar to <a href=ft_putnbr_v2.c>approach</a> except that the function could be more easily adapted to handle displaying integers in any base (more on this later).
 
 First, we define all the characters used in base 10 within a string: <code>char	base[11] = "0123456789"</code>. There are 10 characters that are used in base 10 but I've catered for 11 spaces in my array - the last one is for the null terminator!

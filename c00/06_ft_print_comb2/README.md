@@ -41,7 +41,7 @@ Note that <code>00 99</code> is followed by <code>01 02</code>. In other words, 
 </details>
 
 <details>
-<summary><h3><b>Approach 1.1: Use 1 function and 4 variables to represent the 4 digits</b></h3></summary>
+<summary><h3>Approach 1.1: Use 1 function and 4 variables to represent the 4 digits</h3></summary>
 This <a href=ft_print_comb2_v1_1.c>answer</a> uses the same approach as was used for <a href=../05_ft_print_comb/ft_print_comb.c>ft_print_comb</a>. In other words, it uses 4 variables to represent each of the 4 digits and 4 <code>while</code> loops to go through each of their values. 
 
 A key thing to note is that we don't use the last combination of digits (i.e., <code>98 99</code>) to set the <code>while</code> loop conditions. This is unlike <a href=../05_ft_print_comb/ft_print_comb.c>ft_print_comb</a> where we had used the last combination of <code>789</code> to set the conditions. Here, if we had used the following (i.e., only allow <code>a2</code> to go up to 8), we would not be able to get combinations like <code>09 10</code>. 
@@ -79,7 +79,7 @@ Despite the above efforts, the function remains over 25 lines long and thus not 
 </details>
 
 <details>
-<summary><h3><b>Approach 1.2: Use 2 functions and 4 variables to represent the 4 digits</b></h3></summary>
+<summary><h3>Approach 1.2: Use 2 functions and 4 variables to represent the 4 digits</h3></summary>
 This <a href=ft_print_comb2_v1_2.c>answer</a> splits the code in <a href=ft_print_comb2_v1_1.c>Approach 1.1</a> into two functions. 
 
 Specifically, the commands to write the digits are delegated to the <code>ft_write_it_all</code> function. This is simply done by copying and pasting the necessary codes into the new function and making sure that all the ingredients needed in the new function are specified (i.e., the 4 variables representing the 4 digits).
@@ -89,7 +89,7 @@ When creating such helper functions, I personally find it easier to think about 
 </details>
 
 <details>
-<summary><h3><b>Approach 2: Use an array of 2 integers</b></h3></summary>
+<summary><h3>Approach 2: Use an array of 2 integers</h3></summary>
 This <a href=ft_print_comb2_v2.c>approach</a> uses an array to 'hold' all the variables needed for the task. An array is suitable since the variables we need are of the same data type (either <code>char</code> or <code>int</code>). 
 
 While we can use an array to hold the 4 digits, I chose to hold two integers within the array. For instance, for the last combination of numbers (<code>98 99</code>), <code>array[0]</code> will hold <code>98</code> and <code>array[1]</code> will hold <code>99</code>. As a result, the <code>while</code> loop conditions can simply be set according to the last combination (<code>98 99</code>). Also, the <code>if</code> statement comparing the two 2-digit combinations is more intuitive.

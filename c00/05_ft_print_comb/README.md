@@ -36,7 +36,7 @@ See [testing file](main.c)
 </details>
 
 <details>
-<summary><h3><b>Approach</b></h3></summary>
+<summary><h3>Approach</h3></summary>
 This <a href=ft_print_comb.c>answer</a> sets 3 variables to represent the 3 digits in a combination and then uses 3 <code>while</code> loops to loop their values.
 
 Within each combination, the digits must be ascending order, hence the variables are initialised to at least be higher than the previous digit:

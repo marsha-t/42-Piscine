@@ -37,6 +37,6 @@ z</code></pre>
 </details>
 
 <details>
-<summary><h3><b>Approach</b></h3></summary>
+<summary><h3>Approach</h3></summary>
 The <a href=ft_putchar.c>answer</a> is in the question.
 </details>
