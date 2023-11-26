@@ -1,33 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_combn.c                                   :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mateo <marsha.teo@gmail.com>               +#+  +:+       +#+        */
+/*   By: mateo <mateo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/25 10:56:20 by mateo             #+#    #+#             */
-/*   Updated: 2023/11/25 10:56:20 by mateo            ###   ########.fr       */
+/*   Created: 2023/10/26 13:45:15 by mateo             #+#    #+#             */
+/*   Updated: 2023/10/26 13:45:15 by mateo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-
-void	ft_print_combn(int n)
+int	ft_strlen(char *str)
 {
-	char	arr[n];
-	int		i;
-	char	d;
+	int	i;
 
 	i = 0;
-	d = '0';
-	while (i < n)
-	{
-		while (d <= '9')
-		{
-			arr[i] = 
-			d++;
-		}
+	while (str[i] != '\0')
 		i++;
-	}
+	return (i);
 }
