@@ -3,7 +3,7 @@ The very first C project in the Piscine!
 
 | Exercise | Function |
 |---|---|
-| 00 | [ft_putchar.c](00_ft_putchar) |
+| 00 | [ft_putchar](00_ft_putchar) |
 | 01 | [ft_print_alphabet](01_ft_print_alphabet) |
 | 02 | [ft_print_reverse_alphabet](02_ft_print_reverse_alphabet) |
 | 03 | [ft_print_numbers](03_ft_print_numbers) |
