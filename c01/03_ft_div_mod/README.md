@@ -30,17 +30,22 @@ int	main(void)
 See [testing file](main.c)
 
 </details>
+
 <details>
 <summary><h3>Output</h3></summary>
+
 <pre><code>div: 3
 mod: 1</code></pre>
+
 </details>
 
 <details>
 <summary><h3>Approach</h3></summary>
+
 Even though the <code>ft_div_mod</code> function in this <a href=ft_div_mod.c>exercise</a> does not return any value, it is able to return the results of division and modulus back to the <code>main</code> function due to the use of pointers. 
 
 Specifically, in the <code>main</code> function, <code>div</code> and <code>mod</code> are declared and their addresses passed into <code>ft_div_mod</code>. Within <code>ft_div_mod</code>, we simply have to make sure that the results of division and modulus are passed to the values of the <code>div</code> and <code>mod</code> pointers. We are able to 'return' two integers even though this function is declared to not return anything at all!
 
 One thing to take note of here is the case where the divisor is 0. In such cases, the result is undefined, hence we should only run the <code>ft_div_mod</code> function in cases where the divisor is not 0. This is taken care of with an <code>if</code> statement: <code>if (b != 0)</code>. 
+
 </details>

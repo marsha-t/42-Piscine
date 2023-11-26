@@ -31,6 +31,7 @@ int	main(void)
 } </pre></code>
 
 See [testing file](main.c)
+
 </details>
 
 <details>
@@ -38,10 +39,12 @@ See [testing file](main.c)
 
 <pre><code>Before: a = 10, b = 3
 After:  a = 3, b = 1</code></pre>
+
 </details>
 
 <details>
 <summary><h3>Approach</h3></summary>
+
 This <a href=ft_ultimate_div_mod.c>exercise</a> is very similar to <a href=../03_ft_div_mod/ft_div_mod.c>ft_div_mod</a>, except that the results of division and modulus 'returned' into the values of <code>a</code> and <code>b</code>. 
 
 But before you get carried away, remember that the code is executed sequentially. If we were to execute the following code, we would return the result of <code>a</code> divided by <code>b</code> in <code>a</code> but we would no longer be using the original value of <code>a</code> for the modulus operation:
@@ -53,10 +56,10 @@ But before you get carried away, remember that the code is executed sequentially
 		*a = *a / *b;
 		*b = *a % *b ;
 	}
-}
-</code></pre>
+}</code></pre>
 
 We'll need a temporary variable to retain the original value of <code>a</code>. Specifically, <code>temp_a</code> will store the original value of <code>a</code> and this value will be retrieved for the modulus operation:
+
 <pre><code>void	ft_ultimate_div_mod(int *a, int *b)
 {
 	int	temp_a;
@@ -67,7 +70,7 @@ We'll need a temporary variable to retain the original value of <code>a</code>. 
 		*a = *a / *b;
 		*b = temp_a % *b;
 	}
-}
-</code></pre>
+}</code></pre>
+
 </details>
 

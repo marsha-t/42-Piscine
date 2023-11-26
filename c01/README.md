@@ -2,7 +2,7 @@
 
 | Exercise | Function |
 |---|---|
-| 00 | [ft_ft.c](00_ft_ft) |
+| 00 | [ft_ft](00_ft_ft) |
 | 01 | [ft_ultimate_ft](01_ft_ultimate_ft) |
 | 02 | [ft_swap](02_ft_swap) |
 | 03 | [ft_div_mod](03_ft_div_mod) |

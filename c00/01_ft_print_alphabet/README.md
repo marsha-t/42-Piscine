@@ -20,8 +20,7 @@ void ft_print_alphabet(void);
 {
 	ft_print_alphabet();
 	return (0);
-}
-</pre></code>
+}</code></pre>
 
 See [testing file](main.c)
 
@@ -39,7 +38,6 @@ See [testing file](main.c)
 This <a href=ft_print_alphabet_v1.c>approach</a> simply puts everything that needs to be written into a single <code>write</code> command. It completes the task with very few lines. Just make sure the text is copied correctly and the number of characters to be printed correctly calibrated. 
 
 </details>
-
 
 <details>
 <summary><h3>Approach 2: Use <code>while</code> loops</h3></summary>

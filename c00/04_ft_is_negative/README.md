@@ -14,6 +14,7 @@ void ft_is_negative(int n);
 
 <details>
 <summary><h3>Testing</h3></summary>
+
 <pre><code> #include &ltlimits.h&gt
 int	main(void)
 {
@@ -29,22 +30,27 @@ int	main(void)
 	write(1, "\n", 1);
 	return (0);
 } </code></pre>
+
 When testing with integers, it's always good to test with the extreme values. Instead of memorising the minimum and maximum values, simply use the <code>limits.h</code> library which has the macros <code>INT_MIN</code> and <code>INT_MAX</code> which represent the integer minimum and maximum respectively.
 
 See [testing file](main.c)
+
 </details>
 
 <details>
 <summary><h3>Output</h3></summary>
+
 <pre><code>P
 P
 P
 N
 N</code></pre>
+
 </details>
 
 <details>
 <summary><h3>Approach</h3></summary>
+
 The <a href=ft_is_negative.c>answer</a> uses <code>if/else</code>. In this version, we write 'N' if the number is negative and 'P' otherwise. We could've flipped the conditions as well:
 
 <pre><code>if (n >= 0)
@@ -53,4 +59,5 @@ else
 	write(1, "N", 1);</code></pre>
 
 Since there is only one line of code in both the <code>if</code> and <code>else</code> commands, we can omit the curly braces (though these braces were included in this <a href=ft_is_negative.c>answer</a>)
+
 </details>

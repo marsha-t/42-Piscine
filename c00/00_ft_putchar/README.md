@@ -25,8 +25,7 @@ write(1, &c, 1);
 	ft_putchar('\n');
 	ft_putchar('z');
 	return (0);
-}
-</code></pre>
+}</code></pre>
 
 See [testing file](main.c)
 

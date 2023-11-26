@@ -18,7 +18,6 @@ void ft_rev_int_tab(int *tab, int size);
 <summary><h3>Testing</h3></summary>
 
 <pre><code>#include &ltstdio.h&gt
-
 int	main(void)
 {
 	int	num[4];
@@ -39,15 +38,19 @@ See [testing file](main.c)
 
 <details>
 <summary><h3>Output</h3></summary>
+
 <pre><code>Before: 1, 2, 3, 4
 After:  4, 3, 2, 1</code></pre>
+
 </details>
 
 <details>
 <summary><h3>Approach 1: Swap first half of the array with the second half</h3></summary>
+
 We continue to work with arrays in this exercise, this time with an array of integers. These are less commonly null-terminated, hence it is super useful that the user would have to specify the number of elements in the array when calling <code>ft_rev_int_tab</code> function. 
 
 With this <a href=ft_rev_int_tab_v1.c>approach</a>, , we reverse the order of the integers in the array by swapping the integers around, the last element with the first, the second with the penultimate, etc. However, we can't loop through all the integers in the array and initiate a swap for all of them, else we risk swapping everything back to its original order. Instead, we only really need to swap the first half of the elements with the second half. Hence, the <code>while</code> loop condition is set to go through only the first half of the array:
+
 <pre><code>19	i = 0;
 20	mid = size / 2;
 21	while (i < mid)</code></pre>
@@ -60,6 +63,7 @@ We could also have defined the while loop condition differently using <code>whil
 
 <details>
 <summary><h3>Approach 2: Use another array to store the reversed integers</h3></summary>
+
 If asked to reverse a list of numbers, I would begin writing another list and writing the numbers in reverse. 
 
 Applying this <a href=ft_rev_int_tab_v2.c>approach</a> in C would be equivalent as defining another array to hold the reversed integers e.g., <code>new_tab</code>. Note that <code>new_tab</code> will have the same size as <code>tab</code>.
@@ -77,7 +81,9 @@ In the above code, we fill <code>new_tab</code> with numbers from <code>tab</cod
 - When <code>i = size - 1</code>, line 22 will refer to the last element of <code>new_tab</code> and the first element of <code>tab</code>
 
 The annoying thing is that we have to 'return' <code>new_tab</code> in <code>tab</code>. It may be tempting to simply assign <code>new_tab</code> to <code>tab</code>:
+
 <pre><code>tab = new_tab</code></pre>
+
 Unfortunately, <code>tab</code> is a pointer to (or address of) the first element of the array. Correspondingly, <code>new_tab</code> is a pointer to the first element of the array. This line of code therefore only assigns the first element of the <code>new_tab</code> array to the first element of the <code>tab</code> array. The rest of the <code>tab</code> array remains unchanged. As a result, another <code>while</code> loop is required to replace all the elements in <code>tab</code> with that from <code>new_tab</code>:
 
 <pre><code>25	i = 0;
@@ -86,4 +92,5 @@ Unfortunately, <code>tab</code> is a pointer to (or address of) the first elemen
 28		tab[i] = new_tab[i];
 29		i++;
 30	}</code></pre>
+
 </details>

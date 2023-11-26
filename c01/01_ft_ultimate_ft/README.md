@@ -14,6 +14,7 @@ void ft_ultimate_ft(int *********nbr);
 
 <details>
 <summary><h3>Testing</h3></summary>
+
 <pre><code>#include &ltstdio.h&gt
 
 int	main(void)
@@ -46,20 +47,23 @@ int	main(void)
 See [testing file](main.c)
 
 </details>
+
 <details>
 <summary><h3>Output</h3></summary>
+
 <pre><code>Before: 50
 After:  42</code></pre>
+
 </details>
 
 <details>
 <summary><h3>Approach</h3></summary>
+
 From this <a href=ft_ultimate_ft.c>exercise</a>, you'd realise that <code>*</code> and <code>&</code> (the referencing and dereferencing operators respectively) can be layered upon each other multiple times. 
 
 First, in our <code>main</code> function, we will create a pointer to pointer to pointer to pointer to pointer to pointer to pointer to pointer to <code>int</code> (note that this is one less 'pointer to' than that listed in the assignment instructions). We declare an integer and initialise it to 50. 
 
 <pre><code>#include &ltstdio.h&gt
-
 int	main(void)
 {
 	int	x;
