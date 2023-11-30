@@ -45,7 +45,7 @@ After:  a = 3, b = 1</code></pre>
 <details>
 <summary><h3>Approach</h3></summary>
 
-This <a href=ft_ultimate_div_mod.c>exercise</a> is very similar to <a href=../03_ft_div_mod/ft_div_mod.c>ft_div_mod</a>, except that the results of division and modulus 'returned' into the values of <code>a</code> and <code>b</code>. 
+This <a href=ft_ultimate_div_mod.c>exercise</a> is very similar to <a href=../03_ft_div_mod>ft_div_mod</a>, except that the results of division and modulus 'returned' into the values of <code>a</code> and <code>b</code>. 
 
 But before you get carried away, remember that the code is executed sequentially. If we were to execute the following code, we would return the result of <code>a</code> divided by <code>b</code> in <code>a</code> but we would no longer be using the original value of <code>a</code> for the modulus operation:
 

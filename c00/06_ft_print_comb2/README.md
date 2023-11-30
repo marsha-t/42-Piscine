@@ -43,9 +43,9 @@ Note that <code>00 99</code> is followed by <code>01 02</code>. In other words, 
 <details>
 <summary><h3>Approach 1.1: Use 1 function and 4 variables to represent the 4 digits</h3></summary>
 
-This <a href=ft_print_comb2_v1_1.c>answer</a> uses the same approach as was used for <a href=../05_ft_print_comb/ft_print_comb.c>ft_print_comb</a>. In other words, it uses 4 variables to represent each of the 4 digits and 4 <code>while</code> loops to go through each of their values. 
+This <a href=ft_print_comb2_v1_1.c>answer</a> uses the same approach as was used for <a href=../05_ft_print_comb>ft_print_comb</a>. In other words, it uses 4 variables to represent each of the 4 digits and 4 <code>while</code> loops to go through each of their values. 
 
-A key thing to note is that we don't use the last combination of digits (i.e., <code>98 99</code>) to set the <code>while</code> loop conditions. This is unlike <a href=../05_ft_print_comb/ft_print_comb.c>ft_print_comb</a> where we had used the last combination of <code>789</code> to set the conditions. Here, if we had used the following (i.e., only allow <code>a2</code> to go up to 8), we would not be able to get combinations like <code>09 10</code>. 
+A key thing to note is that we don't use the last combination of digits (i.e., <code>98 99</code>) to set the <code>while</code> loop conditions. This is unlike <a href=../05_ft_print_comb>ft_print_comb</a> where we had used the last combination of <code>789</code> to set the conditions. Here, if we had used the following (i.e., only allow <code>a2</code> to go up to 8), we would not be able to get combinations like <code>09 10</code>. 
 
 <pre><code>a1 = 47;
 while (++a1 <= 57)

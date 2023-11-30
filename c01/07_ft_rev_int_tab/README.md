@@ -55,7 +55,7 @@ With this <a href=ft_rev_int_tab_v1.c>approach</a>, , we reverse the order of th
 20	mid = size / 2;
 21	while (i < mid)</code></pre>
 
-Within this loop, we swap the first and last element of the array where <code>tab[0]</code> refers to the first element and <code>tab[size - 1]</code> refers to the last element. We use <code>size - 1</code> because arrays are 0-indexed, hence the nth element in an array has an index of n - 1. A similar set of commands are used for swapping as in <a href=../02_ft_swap/ft_swap.c>ft_swap</a>. To move to the second element, we use <code>i++</code> and to the penultimate element, we use <code>size--</code>.
+Within this loop, we swap the first and last element of the array where <code>tab[0]</code> refers to the first element and <code>tab[size - 1]</code> refers to the last element. We use <code>size - 1</code> because arrays are 0-indexed, hence the nth element in an array has an index of n - 1. A similar set of commands are used for swapping as in <a href=../02_ft_swap>ft_swap</a>. To move to the second element, we use <code>i++</code> and to the penultimate element, we use <code>size--</code>.
 
 We could also have defined the while loop condition differently using <code>while (i < size)</code>. This  would also avoid initiating too many unnecessary swaps and is written with fewer lines of code.
 

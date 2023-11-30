@@ -33,7 +33,7 @@ int	main(void)
 	return (0);
 }</code></pre>
 
-As with <a href=..\04_ft_is_negative.c>ft_is_negative</a>, when testing with integers, it's good to test with the extreme values. The <code>limits.h</code> library with the macros <code>INT_MIN</code> and <code>INT_MAX</code> for integer minimum and maximum makes this very simple.
+As with <a href=..\04_ft_is_negative>ft_is_negative</a>, when testing with integers, it's good to test with the extreme values. The <code>limits.h</code> library with the macros <code>INT_MIN</code> and <code>INT_MAX</code> for integer minimum and maximum makes this very simple.
 
 See [testing file](main.c)
 
@@ -174,31 +174,5 @@ Seems a little extra but imagine you had to display a number in base 8. This fun
 15	} </code></pre>
 
 We've specified the string <code>base</code> accordingly <i>and</i> adjusted the rest of the function to account for base 8. Importantly, the mathematical expressions now use 8 instead of 10 e.g., we use <code>x / 8</code> and <code>x % 8</code> in lines 13 and 14 instead of <code>x / 10</code> and <code>x % 10</code>. 
-
-In this approach, <code>base</code> is declared and initialised in the same line. For this to pass The Norme, the code would need to be amended as follows:
-
-<pre><code>char base[11];
-base[0] = '0';
-base[1] = '1';
-base[2] = '2';
-base[3] = '3';
-base[4] = '4';
-base[5] = '5';
-base[6] = '6';
-base[7] = '7';
-base[8] = '8';
-base[9] = '9';
-base[10] = '\0';</code></pre>
-
-or we can use a <code>while</code> loop to make this less tedious:
-
-<pre><code>char base[11];
-int i; 
-i = -1;
-while (++i <= 9)
-	base[i] = i + 48; 
-base[++i] = '\0'</code></pre>
-
-Do note that this is many more lines of code even when using the <code>while</code> loop and removing lines for incrementing (e.g., a line just for <code>i++;</code>). Technically, <code>str[10] = '\0'</code> is not required but it's a good practice to end strings with a null terminator.
 
 </details>

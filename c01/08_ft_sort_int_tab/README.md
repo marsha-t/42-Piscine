@@ -48,7 +48,7 @@ After:  0, 1, 2, 3</code></pre>
 <details>
 <summary><h3>Approach 1: Compare an integer with the next integer </h3></summary>
 
-As with the last <a href=../07_ft_rev_int_tab/ft_rev_int_tab.c>exercise</a>, this <a href=ft_sort_int_tab_v1.c>answer</a> involves the swapping of integers within the array. Specifically, we compare an integer with the integer that comes after it and swap them if they are not in order. 
+As with the last <a href=../07_ft_rev_int_tab>exercise</a>, this <a href=ft_sort_int_tab_v1.c>answer</a> involves the swapping of integers within the array. Specifically, we compare an integer with the integer that comes after it and swap them if they are not in order. 
 
 We will use <code>i</code> to select an element of the array and compare this element with the next. We will need to loop through all the elements except the last one. Hence, the <code>while</code> loop condition is defined as <code>i < size - 1</code> (which is equivalent to <code>i <= size - 2</code>). If we allow <code>i</code> to reach <code>size - 1</code> (i.e, to refer to the last element), we would be asking the machine to compare the last element to the element that comes after it (which does not exist!).
 
