@@ -1,4 +1,3 @@
-~write more about passing by reference with arrays~
 ## ft_putstr
 
 |               ft_putstr        |

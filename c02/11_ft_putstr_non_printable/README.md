@@ -109,7 +109,7 @@ The code could be amended by using an else condition to ensure that the <code>'0
 	write(1, &base[c % 16], 1);
 }</code></pre>
 
-However, there is scope to simplify the code even further by recognising that bases greater than 11 can use 2 characters to represent all 127 characters in the ASCII table. For instance, <code>7F</code> in base 16 represents the <code>DEL</code> character but 3 digits is needed to represent it in base 10 and 8 (specifically, <code>127</code> and <code>177</code> respectively). Note that for base 11, 2 characters can only represent up to 11 * 11 = 121 characters. However, for base 12, 2 characters can represent up to 12 * 12 = 144 characters, which is more than enough for the 127 characters in ASCII. 
+However, there is scope to simplify the code even further by recognising that bases greater than 11 can use 2 characters to represent all 128 characters in the ASCII table. For instance, <code>7F</code> in base 16 represents the <code>DEL</code> character but 3 digits is needed to represent it in base 10 and 8 (specifically, <code>127</code> and <code>177</code> respectively). Note that for base 11, 2 characters can only represent up to 11 * 11 = 121 characters. However, for base 12, 2 characters can represent up to 12 * 12 = 144 characters, which is more than enough for the 128 characters in ASCII. 
 
 After streamlining the code, we can omit recursion altogether and display the first and second character separately:
 <pre><code>33	ft_putchar(hex[c / 16]);

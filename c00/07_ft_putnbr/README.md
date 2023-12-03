@@ -11,6 +11,8 @@ has to be able to display all possible values within an <code>int</code> type va
 ```
 void ft_putnbr(int nb);
 ```
+- For example:
+	- <code>ft_putnbr(42)</code> displays "<code>42</code>".
 
 <details>
 <summary><h3>Testing</h3></summary>
