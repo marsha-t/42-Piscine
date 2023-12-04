@@ -84,28 +84,29 @@ Because the backslash is typically used for escape sequences (e.g, <code>\n</cod
 Within <code>ft_tohex</code>, we adapt Approach 3 in <a href=../../c00/07_ft_putnbr>ft_putnbr</a> for base 16 (i.e., hex representation). 
 
 First, a straightforward adaptation of Approach 3 would result in the following code:
-<pre><code>void	ft_tohex(int c)
+<pre><code>void	ft_tohex(char c)
 {
 	char 		*base; 
 
 	base = "0123456789abcdef";
-	if (c > 16)
+	if (c > 15)
 		ft_tohex(c / 16);
 	write(1, &base[c % 16], 1);
 }</code></pre>
 
-However, this code omits '0' when displaying the first 16 characters in ASCII. For instance, a new line (<code>'\n'</code>) will be displayed simply as <code>'a'</code> instead of <code>'0a'</code>.
+However, this code omits <code>'0'</code> when displaying the first 16 characters in ASCII. For instance, a new line (<code>'\n'</code>) will be displayed simply as <code>'a'</code> instead of <code>'0a'</code>.
 
-The code could be amended by using an else condition to ensure that the <code>'0'</code> is displayed as well:
-<pre><code>void	ft_tohex(int c)
+Specifically, we want <code>ft_tohex</code> to add <code>'0'</code> when the character is among the first 16 characters of the ASCII table (i.e., 0-15 in ASCII) and it's the first time we're calling it. We do not want <code>ft_tohex</code> to add <code>'0'</code> if it was called as part of the recursion. We can use a second parameter to keep track of this. In the code below, we use an <code>int</code> parameter <code>recursion</code>. When <code>ft_tohex</code> calls itself as part of the recursive process, <code>recursion</code> will be set to 1. However, when we call <code>ft_tohex</code> from <code>ft_putstr_non_printable</code>, we will set <code>recursion</code> to 0. 
+
+<pre><code>void	ft_tohex(char c, int recursion)
 {
 	char 		*base; 
 
 	base = "0123456789abcdef";
-	if (c > 16)
-		ft_tohex(c / 16);
-	else 
-		write(1, &base[c / 16], 1);
+	if (c < 16 && recursion == 0)
+		write(1, "0", 1);
+	if (c >= 16)
+		ft_tohex(c / 16, 1);
 	write(1, &base[c % 16], 1);
 }</code></pre>
 

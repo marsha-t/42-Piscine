@@ -50,6 +50,8 @@ See [testing file](main.c)
 5
 2147483647</code></pre>
 
+The output for <code>INT_MAX</code> and <code>INT_MIN</code> (from the <code>limits.h</code> library) may look different if these values are different on your machine. 
+
 </details>
 
 <details>
@@ -118,7 +120,7 @@ Here, we don't even need the modulo to display the single digit (but we will nee
 
 When the number is 10 or greater, we call on the <code>ft_putnbr</code> function to display the number divided by 10: <code>ft_putnbr(x / 10)</code>.
 
-<pre><code>30	if (nb > 9)
+<pre><code>30	if (nb >= 10)
 31	ft_putnbr(nb / 10);</code></pre>
 
 For instance, if we want to display 12 (i.e., <code>ft_putnbr(12)</code>), we will first call the function to display 12 divided 10 (i.e., <code>ft_putnbr(12/10)</code> which is equivalent to <code>ft_putnbr(1)</code>). Within <code>ft_putnbr(1)</code>, the code runs exactly as described above for numbers less than 10. We then exit <code>ft_putnbr(1)</code> and return to <code>ft_putnbr(12)</code> and run <code>c = x % 10 + 48</code>: 12 % 10 = 2 and we convert this to <code>'2'</code> by adding 48. We have successfully printed <code>'1'</code> and <code>'2'</code> and in that order! 
@@ -170,7 +172,7 @@ Seems a little extra but imagine you had to display a number in base 8. This fun
 9		write(1, "-", 1);
 10		x = -x;
 11	}
-12	if (x > 7)
+12	if (x >= 8)
 13		ft_putnbr_base8(x / 8);
 14	write(1, &base[x % 8], 1);
 15	} </code></pre>

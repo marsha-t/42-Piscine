@@ -61,6 +61,8 @@ See [testing file](main.c)
 4434
 baba</code></pre>
 
+The output for the first test may look different if <code>INT_MIN</code> (from the <code>limits.h</code> library) on your machine is different. 
+
 </details>
 
 <details>
@@ -83,8 +85,8 @@ To check that characters do not repeat in <code>base</code>, each character is c
 
 To write the integer in any base, we adapt <a href=../../c00/07_ft_putnbr>Approach 3 for ft_putnbr</a> accordingly:
 
-<pre><code>73	if (x > b - 1)
-74		ft_putnbr_base(x / b, base);
-75	write(1, &base[x & b], 1);</code></pre>
+<pre><code>71	if (x >= b)
+72		ft_putnbr_base(x / b, base);
+73	write(1, &base[x & b], 1);</code></pre>
 
 </details>

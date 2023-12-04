@@ -60,7 +60,7 @@ str4: 0
 str5: 12345678
 str6: 1410065407</code></pre>
 
-<code>ft_atoi(str6)</code> attempts to convert to <code>int</code> a number greater than the maximum of <code>int</code>. Since the maximum of <code>int</code> differs across machines, the output for the last test case will differ too. 
+<code>ft_atoi(str6)</code> attempts to convert to <code>int</code> a number greater than the <code>INT_MAX</code> (from the <code>limits.h</code> library). Since <code>INT_MAX</code> differs across machines, the output for the last test case will differ too. 
 
 </details>
 

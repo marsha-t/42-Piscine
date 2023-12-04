@@ -6,7 +6,7 @@
 /*   By: mateo <mateo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 17:35:52 by mateo             #+#    #+#             */
-/*   Updated: 2023/12/03 12:59:41 by mateo            ###   ########.fr       */
+/*   Updated: 2023/12/04 15:42:06 by mateo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,8 +58,6 @@ void	ft_putnbr_base(int nbr, char *base)
 {
 	long long	x;
 	int		b;
-	// int		i;
-	// int		array[32];
 
 	x = nbr;
 	b = ft_strlen(base);
@@ -70,7 +68,7 @@ void	ft_putnbr_base(int nbr, char *base)
 			write(1, "-", 1);
 			x = -x;
 		}
-		if (x > b - 1)
+		if (x >= b)
 			ft_putnbr_base(x / b, base);
 		write(1, &base[x % b], 1);
 	}

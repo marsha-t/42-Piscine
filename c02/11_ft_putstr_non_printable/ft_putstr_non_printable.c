@@ -6,7 +6,7 @@
 /*   By: mateo <mateo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 10:49:27 by mateo             #+#    #+#             */
-/*   Updated: 2023/11/30 12:13:54 by mateo            ###   ########.fr       */
+/*   Updated: 2023/12/04 15:37:40 by mateo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_c_is_printable(char c)
 		return (0);
 }
 
-void	ft_tohex(int c)
+void	ft_tohex(char c)
 {
 	char	*hex;
 
