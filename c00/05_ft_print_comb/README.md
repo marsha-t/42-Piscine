@@ -22,7 +22,7 @@ void ft_print_comb(void);
 <details>
 <summary><h3>Testing</h3></summary>
 
-<pre><code> int	main(void)
+<pre><code>int	main(void)
 {
 	ft_print_comb();
 	return (0);

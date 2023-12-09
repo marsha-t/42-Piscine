@@ -7,7 +7,7 @@
 | Allowed functions : None       |
 
 - Reproduce the behavior of the function <code>strlcpy</code> (<code>man strlcpy</code>).
-• Here’s how it should be prototyped :
+- Here’s how it should be prototyped :
 ```
 unsigned int ft_strlcpy(char *dest, char *src, unsigned int size);
 ```

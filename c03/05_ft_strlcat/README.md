@@ -7,7 +7,7 @@
 | Allowed functions : None       |
 
 - Reproduce the behavior of the function <code>strlcat</code> (<code>man strlcat</code>).
-- Here’s how it should be prototype54
+- Here's how it should be prototyped:
 ```
 unsigned int ft_strlcat(char *dest, char *src, unsigned int size);
 ```

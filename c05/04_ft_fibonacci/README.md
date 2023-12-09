@@ -19,7 +19,7 @@ int ft_fibonacci(int index);
 
 <summary><h3>Testing</h3></summary>
 
-<pre><code>#include &gtstdio.h&lt
+<pre><code>#include &ltstdio.h&gt
 int	main(void)
 {
 	for (int i = -2; i < 15; ++i)

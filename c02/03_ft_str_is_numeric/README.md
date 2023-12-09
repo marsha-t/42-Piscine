@@ -6,12 +6,12 @@
 | Files to turn in : ft_str_is_numeric.c |
 | Allowed functions : None       |
 
-- Create a function that returns 1 if the string given as a parameter contains only digits, and 0 if it contains any other character.
+- Create a function that returns <code>1</code> if the string given as a parameter contains only digits, and <code>0</code> if it contains any other character.
 - Here’s how it should be prototyped:
 ```
 int ft_str_is_numeric(char *str);
 ```
-- It should return 1 if <code>str</code> is empty
+- It should return <code>1</code> if <code>str</code> is empty
 
 <details>
 <summary><h3>Testing</h3></summary>

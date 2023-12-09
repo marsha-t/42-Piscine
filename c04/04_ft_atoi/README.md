@@ -26,7 +26,7 @@ int ft_atoi(char *str);
 
 <summary><h3>Testing</h3></summary>
 
-<pre><code>#include &gtstdio.h&lt
+<pre><code>#include &ltstdio.h&gt
 int	main(void)
 {
 	char	str1[20] = "   ---+--+1234a567";
@@ -67,7 +67,7 @@ str6: 1410065407</code></pre>
 <details>
 <summary><h3>Approach</h3></summary>
 
-First, note that <code>ft_atoi</code> here does not reproduce <code>atoi</code> - the broad logic is similar but there are some slight differences. 
+First, note that <code>ft_atoi</code> here does not reproduce <code>atoi</code> - the broad logic is similar (to convert an <u>a</u>rray <u>to</u> <u>i</u>nt, hence <u>atoi</u>) but there are some slight differences. 
 
 This <a href=ft_atoi.c>solution</a>:
 - skips past an arbitrary amount of whitespace (lines 37-38 and the helper function <code>ft_c_is_whitespace</code>);

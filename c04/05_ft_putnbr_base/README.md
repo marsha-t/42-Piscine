@@ -29,7 +29,7 @@ void ft_putnbr_base(int nbr, char *base);
 
 <summary><h3>Testing</h3></summary>
 
-<pre><code>#include &gtunistd.h&lt
+<pre><code>#include &ltunistd.h&gt
 int	main(void)
 {
 	int	a;

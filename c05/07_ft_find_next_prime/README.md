@@ -13,10 +13,10 @@ given as argument.
 int ft_find_next_prime(int nb);
 ```
 
-
+<details>
 <summary><h3>Testing</h3></summary>
 
-<pre><code>#include &gtstdio.h&lt
+<pre><code>#include &ltstdio.h&gt
 int	main(void)
 {
 	int	i;

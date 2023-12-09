@@ -10,8 +10,7 @@
 ```
 void ft_ultimate_div_mod(int *a, int *b);
 ```
-- This function divides parameters <code>a</code> by <code>b</code>. The result of this division is stored in the
-int pointed by <code>a</code>. The remainder of the division is stored in the int pointed <code>b</code>
+- This function divides parameters <code>a</code> by <code>b</code>. The result of this division is stored in the <code>int</code> pointed by <code>a</code>. The remainder of the division is stored in the <code>int</code> pointed <code>b</code>
 
 <details>
 <summary><h3>Testing</h3></summary>

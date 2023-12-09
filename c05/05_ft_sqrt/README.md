@@ -15,7 +15,7 @@ int ft_sqrt(int nb);
 <details>
 <summary><h3>Testing</h3></summary>
 
-<pre><code>#include &gtstdio.h&lt
+<pre><code>#include &ltstdio.h&gt
 int	main(void)
 {
 	int	i;

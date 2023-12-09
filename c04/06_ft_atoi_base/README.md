@@ -22,7 +22,7 @@ int ft_atoi_base(char *str, char *base);
 
 <summary><h3>Testing</h3></summary>
 
-<pre><code>#include &gtstdio.h&lt
+<pre><code>#include &ltstdio.h&gt
 int	main(void)
 {
 	char	str1[20] = "-101010";

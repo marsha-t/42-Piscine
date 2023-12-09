@@ -20,7 +20,7 @@ void ft_print_comb2(void);
 <details>
 <summary><h3>Testing</h3></summary>
 
-<pre><code> int	main(void)
+<pre><code>int	main(void)
 {
 	ft_print_comb2();
 	return (0);

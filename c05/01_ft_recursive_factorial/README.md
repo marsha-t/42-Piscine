@@ -18,7 +18,7 @@ int ft_recursive_factorial(int nb);
 
 <summary><h3>Testing</h3></summary>
 
-<pre><code>#include &gtstdio.h&lt
+<pre><code>#include &ltstdio.h&gt
 int	main(void)
 {
 	printf("3!: %d\n", ft_recursive_factorial(3));

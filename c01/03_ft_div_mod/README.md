@@ -10,7 +10,7 @@
 ```
 void ft_div_mod(int a, int b, int *div, int *mod);
 ```
-- This function divides parameters <code>a</code> by <code>b</code> and stores the result in the int pointed by <code>div</code>. It also stores the remainder of the division of <code>a</code> by <code>b</code> in the int pointed by <code>mod</code>
+- This function divides parameters <code>a</code> by <code>b</code> and stores the result in the <code>int</code> pointed by <code>div</code>. It also stores the remainder of the division of <code>a</code> by <code>b</code> in the <code>int</code> pointed by <code>mod</code>
 
 <details>
 <summary><h3>Testing</h3></summary>

@@ -9,7 +9,7 @@
 - Create an iterated function that returns the value of a power applied to a number.
 - A power lower than 0 returns 0.
 - Overflows must not be handled.
-- We’ve decided that 0 power 0 will returns 1
+- We’ve decided that 0 power 0 will returns <code>1</code>
 - Here’s how it should be prototyped :
 ```
 int ft_iterative_power(int nb, int power);
@@ -19,7 +19,7 @@ int ft_iterative_power(int nb, int power);
 
 <summary><h3>Testing</h3></summary>
 
-<pre><code>#include &gtstdio.h&lt
+<pre><code>#include &ltstdio.h&gt
 int	main(void)
 {
 	printf("2^2 %d\n", ft_iterative_power(2, 2));

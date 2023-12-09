@@ -7,7 +7,7 @@
 | Allowed functions : None       |
 
 - Create a function which sorts an array of integers by ascending order.
-- The arguments are a pointer to int and the number of ints in the array.
+- The arguments are a pointer to <code>int</code> and the number of <code>int</code> in the array.
 - Here’s how it should be prototyped :
 ```
 void ft_sort_int_tab(int *tab, int size);

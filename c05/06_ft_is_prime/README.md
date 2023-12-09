@@ -6,16 +6,17 @@
 | Files to turn in : ft_is_prime.c |
 | Allowed functions : None       |
 
-- Create a function that returns 1 if the number given as a parameter is a prime
-number, and 0 if it isn’t.
+- Create a function that returns <code>1</code> if the number given as a parameter is a prime
+number, and <code>0</code> if it isn’t.
 - Here’s how it should be prototyped :
 ```
 int ft_is_prime(int nb);
 ```
 
+<details>
 <summary><h3>Testing</h3></summary>
 
-<pre><code>#include &gtstdio.h&lt
+<pre><code>#include &ltstdio.h&gt
 int	main(void)
 {
 	int	i;

@@ -7,7 +7,7 @@
 | Allowed functions : None       |
 
 - Reproduce the behavior of the function <code>strstr</code> (<code>man strstr</code>).
-- Here’s how it should be prototyped4
+- Here’s how it should be prototyped:
 ```
 char *ft_strstr(char *str, char *to_find);
 ```
