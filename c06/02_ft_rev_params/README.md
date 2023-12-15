@@ -13,18 +13,20 @@
 
 <details>
 
-<summary><h3>Testing</h3></summary>
+<summary><h3>Testing and Output</h3></summary>
 
-<pre><code>$>./a.out test1 test2 test3 | cat -e</code></pre>
-
-</details>
-
-<details>
-<summary><h3>Output</h3></summary>
-
-<pre><code>test3$
+<pre><code>$>./a.out test1 test2 test3 | cat -e
+test3$
 test2$
-test1$</code></pre>
+test1$
+$>./a.out | cat -e
+$
+$>./a.out "." "a" "A" "0" | cat -e
+0$
+A$
+a%
+.$
+</code></pre>
 
 </details>
 

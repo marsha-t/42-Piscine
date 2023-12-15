@@ -13,16 +13,10 @@
 
 <details>
 
-<summary><h3>Testing</h3></summary>
+<summary><h3>Testing and Output</h3></summary>
 
-<pre><code>$>./a.out a ab 34 C Z | cat -e</code></pre>
-
-</details>
-
-<details>
-<summary><h3>Output</h3></summary>
-
-<pre><code>34$
+<pre><code>$>./a.out a ab 34 C Z | cat -e
+34$
 C$
 Z$
 a$

@@ -16,16 +16,10 @@ $></code></pre>
 
 <details>
 
-<summary><h3>Testing</h3></summary>
+<summary><h3>Testing and Output</h3></summary>
 
-<pre><code>$>./a.out | cat -e</code></pre>
-
-</details>
-
-<details>
-<summary><h3>Output</h3></summary>
-
-<pre><code>./a.out$</code></pre>
+<pre><code>$>./a.out | cat -e
+./a.out$</code></pre>
 
 </details>
 
