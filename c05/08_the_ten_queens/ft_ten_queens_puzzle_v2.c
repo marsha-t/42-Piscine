@@ -60,23 +60,21 @@ void ft_print_array(int *arr)
 	write(1, "\n", 1);
 }
 
-void ft_check_print(int *arr, int i, int *count)
+void ft_check_print(int *arr, int i, int *countptr)
 {
-	int q;
-
 	if (i == 10)
 	{
-		(*count)++;
+		(*countptr)++;
 		ft_print_array(arr);
 	}
 	else
 	{
-		q = -1; 
-		while (++q < 10)
+		arr[i] = 0;
+		while (arr[i] < 10)
 		{
-			arr[i] = q;
 			if (ft_samerow(arr, i) && ft_diag(arr, i))
-				ft_check_print(arr, i+1, count);
+				ft_check_print(arr, i+1, countptr);
+			arr[i]++;
 		}
 	}
 }
@@ -87,10 +85,6 @@ int ft_ten_queens_puzzle(void)
 	int	i;
 	int count;
 
-	i = 0;
-	while (i < 10)
-		arr[i++] = 0;
-	
 	count = 0;
 	i = 0;
 	ft_check_print(arr, i, &count);

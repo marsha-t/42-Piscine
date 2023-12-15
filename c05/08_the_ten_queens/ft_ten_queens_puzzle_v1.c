@@ -9,6 +9,7 @@
 /*   Updated: 2023/12/09 23:11:03 by mateo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <unistd.h>
 
 int ft_samerow(int *arr, int i)
@@ -36,7 +37,7 @@ int ft_diag(int *arr, int i)
 	j = 0;
 	while (j < i)
 	{
-		if (arr[j] == arr[i] + j - i)
+		if (arr[i] == arr[j] + i - j)
 			return (0);
 		if (arr[i] == arr[j] + j - i)
 			return (0);
@@ -60,7 +61,7 @@ void ft_print_array(int *arr)
 	write(1, "\n", 1);
 }
 
-void ft_check_print(int *arr, int i, int *count)
+void ft_check_print(int *arr, int i, int *countptr)
 {
 	while (arr[0] <= 9)
 	{
@@ -71,7 +72,7 @@ void ft_check_print(int *arr, int i, int *count)
 			else 
 			{
 				ft_print_array(arr);
-				(*count)++;
+				(*countptr)++;
 				arr[i--] = 0;
 				arr[i]++;
 			}
@@ -98,7 +99,6 @@ int ft_ten_queens_puzzle(void)
 	i = 0;
 	while (i < 10)
 		arr[i++] = 0;
-	
 	count = 0;
 	i = 0;
 	ft_check_print(arr, i, &count);
