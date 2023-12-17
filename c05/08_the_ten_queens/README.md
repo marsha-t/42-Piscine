@@ -27,7 +27,6 @@ $&gt</code></pre>
 - The sequence goes from left to right. The first digit represents the first Queen’s position in the first column (the index starting from 0). The Nth digit represents the Nth Queen’s position in the Nth column.
 - The return value must be the total number of displayed solutions.
 
-
 <details>
 
 <summary><h3>Testing</h3></summary>
@@ -65,6 +64,8 @@ count: 724</code></pre>
 
 <details>
 <summary><h3>Approach 1: Identify solutions iteratively</h3></summary>
+
+Before we start coding, let's think through this puzzle: In a correct solution, there will only be one queen in each column as well as only one queen in each row. Since we will represent the queens on a chess board using an array, we have already narrowed candidate solutions down to one queen per column. 
 
 This <a href=ft_ten_queens_puzzle_v1.c>approach</a> identifies the various (724 to be exact) solutions to the Ten Queens Puzzle iteratively, without the use of recursion. The assignment specified the use of recursion but I found this solution to be more intuitive (at least for now). From this solution, I built the next solution (<a href=ft_ten_queens_puzzle_v2>Approach 2</a>) based on recursion. 
 
