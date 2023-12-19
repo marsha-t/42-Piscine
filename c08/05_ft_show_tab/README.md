@@ -26,7 +26,6 @@ void ft_show_tab(struct s_stock_str *par);
 #include &ltstdio.h&gt
 
 struct s_stock_str	*ft_strs_to_tab(int ac, char **av);
-void				ft_show_tab(struct s_stock_str *par);
 
 int	main(void)
 {
@@ -38,7 +37,7 @@ int	main(void)
 
 <code>ft_stock_str.h</code> has to be included so that the program can access the created <code>t_stock_str</code> structure. I've retained this header file as specified in the previous <a href=../04_ft_strs_to_tab>exercise</a> i.e., the file only contains the creation of <code>t_stock_str</code>. 
 
-Consequently, <code>main.c</code> includes function prototypes for <code>ft_strs_to_tab</code> and <code> ft_show_tab</code>.
+Consequently, <code>main.c</code> will also need to include the function prototype for <code>ft_strs_to_tab</code>.
 
 See [testing file](main.c)
 

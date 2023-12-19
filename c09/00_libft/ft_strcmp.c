@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mateo <mateo@student.42.fr>                +#+  +:+       +#+        */
+/*   By: mateo <marsha.teo@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/01 10:50:15 by mateo             #+#    #+#             */
-/*   Updated: 2023/12/18 23:22:21 by mateo            ###   ########.fr       */
+/*   Created: 2023/11/10 14:33:59 by mateo             #+#    #+#             */
+/*   Updated: 2023/11/10 18:24:54 by mateo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+int	ft_strcmp(char *s1, char *s2)
 {
-	unsigned int	i;
+	int	r;
+	int	i;
 
 	i = 0;
-	if (n == 0)
-		return (0);
-	while ((s1[i] == s2[i]) && (s1[i] != '\0') && (i < n - 1))
+	r = 0;
+	while ((s1[i] == s2[i]) && (s1[i] != '\0'))
 		i++;
-	return (s1[i] - s2[i]);
+	if (s1[i] != s2[i])
+		r = s1[i] - s2[i];
+	return (r);
 }
