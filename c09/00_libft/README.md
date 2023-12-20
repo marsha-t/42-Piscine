@@ -25,7 +25,7 @@ int ft_strcmp(char *s1, char *s2);
 
 - Run <code>sh libft_creator.sh</code> in the terminal. 
 - It should have created a <code>libft.a</code> file. 
-- Check that the functions can be accessed via <code>libft.a</code> by first compiling a test program: <code>gcc ft.h main.c libft.a</code>
+- Check that the functions can be accessed via <code>libft.a</code> by first compiling a test program: <code>gcc main.c libft.a</code>
 	- <a href=main.c>main.c</a> contains code to use all five functions. 
 - Execute the program using <code>./a.out</code>
 
