@@ -57,6 +57,10 @@ int	main(void)
 
 To summarise the testing code, I've used function prototypes for <code>ft_putchar</code> and <code>ft_putnbr</code> but the full functions are included in the [main.c](main.c). 
 
+Function pointers to <code>ft_putnbr</code> and <code>ft_sq</code> are used in the testing of <code>ft_foreach</code>:
+- <code>ft_putnbr</code> displays <code>nb</code>; and
+- <code>ft_sq</code> squares <code>n</code> and displays the squared number followed by a new line. 
+
 </details>
 
 <details>
