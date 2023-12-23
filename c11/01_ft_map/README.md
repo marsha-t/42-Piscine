@@ -68,6 +68,8 @@ See [testing file](main.c)
 <details>
 <summary><h3>Approach</h3></summary>
 
+Before we begin on the solution, let's investigate function <code>f</code>. As in the previous <a href=../00_ft_foreach>exercise</a>, <code>f</code> takes a <code>int</code> as an argument. But unlike the previous exercise, it now returns an <code>int</code> value.
+
 This <a href=ft_map.c>solution</a>:
 - allocates space for the array of returned <code>int</code> and returns a null pointer if this allocation was unsuccessful (lines 20-22);
 - iterates through <code>tab</code> using <code>i</code> and a <code>while</code> loop (lines 23-28);
