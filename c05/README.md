@@ -10,4 +10,4 @@
 | 05 | [ft_sqrt](05_ft_sqrt) |
 | 06 | [ft_is_prime](06_ft_is_prime) |
 | 07 | [ft_find_next_prime](07_ft_find_next_prime) |
-| 08 | The Ten Queens (Coming soon!) |
+| 08 | [The Ten Queens](08_the_ten_queens) |
