@@ -78,7 +78,7 @@ Final bit of preamble before we really start: pre-requisites/dependencies. The d
 Now, let's start with the <code>libft.a</code> rule:
 
 <pre><code>12	libft.a: $(OFILES)
-13		ar rc libft.a $(OFILES)</code></pre>
+13		ar rcs libft.a $(OFILES)</code></pre>
 
 This rule is dependent on the list of object files listed within the variable OFILES (line 3). These files do not exist yet but there is a rule to create them:
 

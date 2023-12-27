@@ -64,11 +64,12 @@ Next, we compile the <code>.c</code> files containing the functions we want in o
 <pre><code>gcc -Wall -Wextra -Werror -c ft_putchar.c ft_swap.c ft_putstr.c ft_strlen.c ft_strcmp.c</code></pre>
 
 After that, the static library <code>libft.a</code> is created using the object files:
-<code>ar rc libft.a ft_putchar.o ft_swap.o ft_putstr.o ft_strlen.o ft_strcmp.o</code>
+<code>ar rcs libft.a ft_putchar.o ft_swap.o ft_putstr.o ft_strlen.o ft_strcmp.o</code>
 
 <code>ar</code> creates, modifies or extracts from archives. In this case, a library is essentially a collection/archive of <code>.o</code> files but organised in a specific way. <code>rc</code> are additional flags:
 - <code>c</code> creates the archive if it does not already exist. Without this flag, the archive would still be created but a warning would be issued as well.
 - <code>r</code> inserts the object files into the archive (with replacement). By doing this with replacement, any older object files in the library are updated with new object files, though this is not critical here since we'd earlier deleted <code>libft.a</code> if it existed and contained older object files.
+- <code>s</code> creates a sorted index for the library. This is not strictly required but it will make it faster to access the functions in the library
 
 Finally, we tidy up the workspace by deleting the intermediate/temporary files i.e., the object files:
 <code>rm -f ft_putchar.o ft_swap.o ft_putstr.o ft_strlen.o ft_strcmp.o</code>

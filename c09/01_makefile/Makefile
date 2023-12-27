@@ -10,7 +10,7 @@ all: libft.a
 	gcc ${CFLAGS} -c -I $(HEADER_DIR) $< -o ${<:.c=.o}
 
 libft.a: $(OFILES)
-	ar rc libft.a $(OFILES)
+	ar rcs libft.a $(OFILES)
 
 clean:
 	rm -f $(OFILES)
