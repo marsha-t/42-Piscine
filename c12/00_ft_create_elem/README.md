@@ -30,6 +30,8 @@ int	main(void)
 	return (0);
 }</code></pre>
 
+Even though we have included a header for this exercise, we can still compile our code using <code>gcc ft_create_elem.c main.c</code> i.e., without mentioning the header. This is because our header is in the same working directory and the compiler already knows to look for it there (since we'd included this header using double quotes).
+
 See [testing file](main.c)
 
 </details>
