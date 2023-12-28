@@ -39,7 +39,7 @@ int	main(void)
 	return (0);
 }</code></pre>
 
-Note that while we will not call <code>ft_create_elem</code> in <code>ft_list_size</code>, we will use it in <code>main.c</code> to create a linked list for testing. Hence, when compiling, we should continue to use <code>gcc ft_list_size.c main.c ft_create_elem.c</code>.
+Note that while we will not call <code>ft_create_elem</code> in <code>ft_list_size</code>, we will use it in <code>main.c</code> to create a linked list for testing. Hence, when compiling, we should  use <code>gcc ft_list_size.c main.c ft_create_elem.c</code>.
 
 See [testing file](main.c)
 
