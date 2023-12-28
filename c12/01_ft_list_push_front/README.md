@@ -19,7 +19,6 @@ void ft_list_push_front(t_list **begin_list, void *data);
 <summary><h3>Testing</h3></summary>
 
 <pre><code>#include "ft_list.h"
-#include &ltstdlib.h&gt
 #include &ltstdio.h&gt
 
 int	main(void)

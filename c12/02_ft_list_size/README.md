@@ -17,7 +17,6 @@ int ft_list_size(t_list *begin_list);
 <summary><h3>Testing</h3></summary>
 
 <pre><code>#include "ft_list.h"
-#include &ltstdlib.h&gt
 #include &ltstdio.h&gt
 
 int	main(void)
