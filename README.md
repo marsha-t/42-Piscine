@@ -8,6 +8,5 @@ This repository documents:
 Before we go:
 - Please note that my testing files (i.e, the main function) are typically located in a separate file (named main.c)
 - I don't recall my results submitting the projects i.e., some of these projects may not have passed Moulinette!
-- I hope to upload everything relating to the Piscine by the end of the year.
 - If you spot any mistakes, please let me know!
 - If you have ideas, feedback or even questions, please let me know!
